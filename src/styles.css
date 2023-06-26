@@ -48,7 +48,8 @@ body {
   transform: rotate(45deg);
 }
 
-.cross:before, .cross:after {
+.cross:before,
+.cross:after {
   content: '';
   position: absolute;
   background-color: black;
@@ -66,6 +67,10 @@ body {
   height: 20%;
   margin-top: -10%;
   width: 100%;
+}
+
+.info-display {
+  font-size: 50px;
 }
 
 .hidden {
