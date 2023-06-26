@@ -1,5 +1,11 @@
 import './styles.css';
-import {createNameInputs, nameInputsContainer, circleNameInput, crossNameInput} from './create_name_inputs';
+import {
+  createNameInputs,
+  nameInputsContainer,
+  circleNameInput,
+  crossNameInput,
+} from './createNameInputs';
+import { createBoard } from './createBoard';
 
 const startButton = document.querySelector('#start-button');
 const board = document.querySelector('.board-container');
@@ -11,6 +17,9 @@ if (startButton && board) {
       return;
     }
     nameInputsContainer.classList.add('hidden');
+    createBoard();
     board.classList.remove('hidden');
   });
 }
+
+export { board };
