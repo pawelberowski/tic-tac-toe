@@ -8,6 +8,7 @@ module.exports = {
         filename: '[name].[chunkhash].bundle.js',
     },
     mode: 'development',
+    devtool: 'eval-source-map',
     plugins: [new HtmlWebpackPlugin({ template: './src/index.html' })],
     module: {
         rules: [
