@@ -1,20 +1,16 @@
 import './styles.css';
-import {
-  createNameInputs,
-  nameInputsContainer,
-  circleNameInput,
-  crossNameInput,
-} from './createNameInputs';
 import { createBoard } from './createBoard';
 
 const startButton = document.querySelector('#start-button');
 const board = document.querySelector('.board-container');
 const infoDisplay = document.querySelector('.info-display');
+const circlePlayerInput = document.querySelector('#circle-input');
+const crossPlayerInput = document.querySelector('#cross-input');
+const nameInputsContainer = document.querySelector('.name-inputs-container');
 
-if (startButton && board) {
-  createNameInputs();
+if (startButton && board && circlePlayerInput && crossPlayerInput) {
   startButton.addEventListener('click', function () {
-    if (!circleNameInput.value || !crossNameInput.value) {
+    if (!circlePlayerInput.value || !crossPlayerInput.value) {
       return;
     }
     nameInputsContainer.classList.add('hidden');
