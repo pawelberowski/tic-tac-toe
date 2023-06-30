@@ -18,4 +18,3 @@ export function fillCell(event) {
   event.target.removeEventListener('click', fillCell);
   checkScore();
 }
-

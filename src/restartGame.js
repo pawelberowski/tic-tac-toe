@@ -1,4 +1,9 @@
-import {infoDisplay, nameInputsContainer, board, restartButton} from "./index";
+import {
+  infoDisplay,
+  nameInputsContainer,
+  board,
+  restartButton,
+} from './index';
 
 export function restartGame() {
   board.classList.add('hidden');
@@ -7,5 +12,3 @@ export function restartGame() {
   infoDisplay.classList.add('hidden');
   nameInputsContainer.classList.remove('hidden');
 }
-
-

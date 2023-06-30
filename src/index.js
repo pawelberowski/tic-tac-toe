@@ -1,4 +1,5 @@
 import './styles.css';
+import './board.css';
 import { createBoard } from './createBoard';
 import { restartGame } from './restartGame';
 

@@ -1,0 +1,59 @@
+.board-container {
+  width: 302px;
+  height: 302px;
+  display: flex;
+  flex-wrap: wrap;
+  border: solid 1px black;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  border: solid 2px black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: solid 10px black;
+}
+
+.cross {
+  width: 90px;
+  height: 90px;
+  position: relative;
+  transform: rotate(45deg);
+}
+
+.cross:before,
+.cross:after {
+  content: '';
+  position: absolute;
+  background-color: black;
+}
+
+.cross:before {
+  left: 50%;
+  width: 20%;
+  margin-left: -10%;
+  height: 100%;
+}
+
+.cross:after {
+  top: 50%;
+  height: 20%;
+  margin-top: -10%;
+  width: 100%;
+}
+
+.info-display {
+  font-size: 50px;
+}
+
+.hidden {
+  display: none;
+}
