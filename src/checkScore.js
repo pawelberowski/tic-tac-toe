@@ -1,5 +1,6 @@
 import { infoDisplay, restartButton } from './index';
 import { restartGame } from './restartGame';
+import { isDraw } from './isDraw';
 
 export function checkScore() {
   const allCells = document.querySelectorAll('.cell');
@@ -15,11 +16,8 @@ export function checkScore() {
     [3, 4, 5],
     [6, 7, 8],
   ];
-  const indexArray = [0,1,2,3,4,5,6,7,8];
-  const draw = indexArray.every(function(number) {
-    return allCells[number].firstChild;
-  })
-  if (draw) {
+
+  if (isDraw(allCells)) {
     infoDisplay.textContent = 'Draw!';
     restartButton.classList.remove('hidden');
     restartButton.addEventListener('click', restartGame);
