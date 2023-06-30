@@ -1,5 +1,4 @@
 import { infoDisplay, restartButton } from './index';
-import { restartGame } from './restartGame';
 import { areAllCellsOccupied } from './areAllCellsOccupied';
 
 export function checkScore() {
@@ -18,8 +17,6 @@ export function checkScore() {
   ];
   if (areAllCellsOccupied(allCells)) {
     infoDisplay.textContent = 'Draw!';
-    restartButton.classList.remove('hidden');
-    restartButton.addEventListener('click', restartGame);
   }
   winningCombos.forEach(function (array) {
     const circleWins = array.every(function (number) {
@@ -34,7 +31,6 @@ export function checkScore() {
         cell.replaceWith(cell.cloneNode(true));
       });
       restartButton.classList.remove('hidden');
-      restartButton.addEventListener('click', restartGame);
       return;
     }
     if (crossWins) {
@@ -43,7 +39,6 @@ export function checkScore() {
         cell.replaceWith(cell.cloneNode(true));
       });
       restartButton.classList.remove('hidden');
-      restartButton.addEventListener('click', restartGame);
       return;
     }
   });
