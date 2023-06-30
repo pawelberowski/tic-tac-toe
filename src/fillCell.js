@@ -1,5 +1,6 @@
 import { infoDisplay } from './index';
 import { checkScore } from './checkScore';
+
 let currentShape = 'circle';
 export function fillCell(event) {
   const cellContent = document.createElement('div');
@@ -17,3 +18,4 @@ export function fillCell(event) {
   event.target.removeEventListener('click', fillCell);
   checkScore();
 }
+

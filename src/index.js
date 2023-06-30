@@ -28,4 +28,4 @@ if (restartButton) {
   restartButton.addEventListener('click', restartGame);
 }
 
-export { board, infoDisplay };
+export { board, infoDisplay, nameInputsContainer, restartButton };

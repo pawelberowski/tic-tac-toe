@@ -1,4 +1,5 @@
-import { infoDisplay } from './index';
+import { infoDisplay, restartButton } from './index';
+import { restartGame } from './restartGame';
 
 export function checkScore() {
   const allCells = document.querySelectorAll('.cell');
@@ -26,6 +27,8 @@ export function checkScore() {
       allCells.forEach(function (cell) {
         cell.replaceWith(cell.cloneNode(true));
       });
+      restartButton.classList.remove('hidden');
+      restartButton.addEventListener('click', restartGame);
       return;
     }
     if (crossWins) {
@@ -33,6 +36,8 @@ export function checkScore() {
       allCells.forEach(function (cell) {
         cell.replaceWith(cell.cloneNode(true));
       });
+      restartButton.classList.remove('hidden');
+      restartButton.addEventListener('click', restartGame);
       return;
     }
   });
