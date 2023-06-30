@@ -1,6 +1,6 @@
 import { infoDisplay, restartButton } from './index';
 import { restartGame } from './restartGame';
-import { isDraw } from './isDraw';
+import { areAllCellsOccupied } from './areAllCellsOccupied';
 
 export function checkScore() {
   const allCells = document.querySelectorAll('.cell');
@@ -16,7 +16,7 @@ export function checkScore() {
     [3, 4, 5],
     [6, 7, 8],
   ];
-  if (isDraw(allCells)) {
+  if (areAllCellsOccupied(allCells)) {
     infoDisplay.textContent = 'Draw!';
     restartButton.classList.remove('hidden');
     restartButton.addEventListener('click', restartGame);
