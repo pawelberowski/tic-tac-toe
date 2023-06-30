@@ -1,6 +1,9 @@
 export function isDraw(cells) {
-  const indexArray = [0, 1, 2, 3, 4, 5, 6, 7, 8];
-  return indexArray.every(function (number) {
-    return cells[number].firstChild;
-  });
+  for (let i = 0; i < 9; i++) {
+    const cell = cells[i];
+    if (!cell.firstChild) {
+      return false;
+    }
+  }
+  return true;
 }

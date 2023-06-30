@@ -16,7 +16,6 @@ export function checkScore() {
     [3, 4, 5],
     [6, 7, 8],
   ];
-
   if (isDraw(allCells)) {
     infoDisplay.textContent = 'Draw!';
     restartButton.classList.remove('hidden');
