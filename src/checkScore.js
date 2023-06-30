@@ -15,6 +15,15 @@ export function checkScore() {
     [3, 4, 5],
     [6, 7, 8],
   ];
+  const indexArray = [0,1,2,3,4,5,6,7,8];
+  const draw = indexArray.every(function(number) {
+    return allCells[number].firstChild;
+  })
+  if (draw) {
+    infoDisplay.textContent = 'Draw!';
+    restartButton.classList.remove('hidden');
+    restartButton.addEventListener('click', restartGame);
+  }
   winningCombos.forEach(function (array) {
     const circleWins = array.every(function (number) {
       return allCells[number].firstChild?.classList.contains('circle');
