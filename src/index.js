@@ -18,8 +18,7 @@ if (startButton && board && circlePlayerInput && crossPlayerInput) {
     nameInputsContainer.classList.add('hidden');
     createBoard();
     board.classList.remove('hidden');
-    const circlePlayerName = document.querySelector('#circle-input').value;
-    infoDisplay.textContent = circlePlayerName + ' goes first';
+    infoDisplay.textContent = circlePlayerInput.value + ' goes first';
     infoDisplay.classList.remove('hidden');
   });
 }
