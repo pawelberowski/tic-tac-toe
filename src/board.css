@@ -57,3 +57,7 @@
 .hidden {
   display: none;
 }
+
+#restart-button {
+  font-size: 30px;
+}
