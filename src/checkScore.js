@@ -17,6 +17,7 @@ export function checkScore() {
   ];
   if (areAllCellsOccupied(allCells)) {
     infoDisplay.textContent = 'Draw!';
+    restartButton.classList.remove('hidden');
   }
   winningCombos.forEach(function (array) {
     const circleWins = array.every(function (number) {
