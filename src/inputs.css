@@ -1,0 +1,13 @@
+.name-inputs-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.name-inputs-container * {
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+.hidden {
+  display: none;
+}
