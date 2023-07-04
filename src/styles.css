@@ -23,6 +23,7 @@ body {
 
 .name-inputs-container * {
   font-size: 30px;
+  margin-bottom: 30px;
 }
 
 .hidden {
